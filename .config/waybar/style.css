@@ -338,3 +338,27 @@ tooltip label {
     color: #d20f39;
     animation: blink-critical 1.2s ease-in-out infinite;
 }
+
+/* --- Notification (Swaync) --- */
+#custom-notification {
+    background: rgba(220, 224, 232, 0.55);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 14px;
+    margin: 4px 6px 4px 4px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#custom-notification:hover {
+    background: rgba(204, 208, 218, 0.7);
+    color: #ffffff;
+}
+
+#custom-notification.dnd {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#custom-notification.inhibited {
+    color: rgba(255, 255, 255, 0.4);
+}
