@@ -3,6 +3,6 @@
     "format": "⏻",
     "tooltip": true,
     "tooltip-format": "Power Menu",
-    "on-click": "wlogout"
-  }
+    "on-click": "hyprctl dispatch exec /usr/bin/wlogout",
+  },
 }

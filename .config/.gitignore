@@ -18,6 +18,8 @@
 !mimeapps.list
 !waybar/
 !waybar/**
+!wlogout/
+!wlogout/**
 
 # cara whitelist
 #!nama-folder/
