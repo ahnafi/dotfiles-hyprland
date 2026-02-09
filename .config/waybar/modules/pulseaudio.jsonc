@@ -1,0 +1,33 @@
+{
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "󰂯 {icon} {volume}%",
+    "format-muted": "󰝟 ",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭 ",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "phone-muted": "󰏲",
+      "portable": "󰗅",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"],
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "pavucontrol -t 4",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
+  "pulseaudio#input": {
+    "format": "{format_source}",
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭 ",
+    "scroll-step": 5,
+    "on-click": "pavucontrol -t 4",
+    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+    "tooltip-format": "Microphone: {source_desc} [{source_volume}%]",
+  },
+}

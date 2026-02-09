@@ -1,0 +1,35 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "height": 38,
+
+  "include": [
+    "~/.config/waybar/modules/wlogout.jsonc",
+    "~/.config/waybar/modules/workspaces.jsonc",
+    "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/pulseaudio.jsonc",
+    "~/.config/waybar/modules/bluetooth.jsonc",
+    "~/.config/waybar/modules/network.jsonc",
+    "~/.config/waybar/modules/backlight.jsonc",
+    "~/.config/waybar/modules/power-profiles-daemon.jsonc",
+    "~/.config/waybar/modules/battery.jsonc",
+  ],
+
+  "modules-left": ["custom/wlogout", "hyprland/workspaces"],
+
+  "modules-center": ["clock"],
+
+  "modules-right": [
+    "pulseaudio",
+    "pulseaudio#input",
+    "bluetooth",
+    "network",
+    "backlight",
+    "power-profiles-daemon",
+    "battery",
+  ],
+}

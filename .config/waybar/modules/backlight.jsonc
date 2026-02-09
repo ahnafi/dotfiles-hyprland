@@ -1,0 +1,14 @@
+{
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    // "scroll-step": 5,
+    // "on-scroll-up": "brightnessctl set +5%",
+    // "on-scroll-down": "brightnessctl set 5%-",
+    "on-click": "brightnessctl set 12%",
+    "on-click-right": "brightnessctl set 44%",
+    "tooltip-format": "Brightness: {percent}%",
+    "min-length": 6,
+  },
+}

@@ -16,9 +16,9 @@
 #!obs-studio/
 #!obs-studio/**
 !mimeapps.list
-
+!waybar/
+!waybar/**
 
 # cara whitelist
 #!nama-folder/
 #!nama-folder/**
-
