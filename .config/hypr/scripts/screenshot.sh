@@ -10,8 +10,12 @@ notify() {
     notify-send "Screenshot" "Tersimpan di $file dan sudah dicopy"
 }
 
+# copy_clip() {
+#     wl-copy < "$file"
+# }
+
 copy_clip() {
-    wl-copy < "$file"
+    wl-copy --type image/png < "$file"
 }
 
 full() {
@@ -59,4 +63,3 @@ case "$1" in
         echo "usage: screenshot.sh {full|area|active|delay-full N|delay-area N}"
         ;;
 esac
-
