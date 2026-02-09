@@ -11,6 +11,7 @@
     "~/.config/waybar/modules/wlogout.jsonc",
     "~/.config/waybar/modules/workspaces.jsonc",
     "~/.config/waybar/modules/clock.jsonc",
+    "~/.config/waybar/modules/tray.jsonc",
     "~/.config/waybar/modules/pulseaudio.jsonc",
     "~/.config/waybar/modules/bluetooth.jsonc",
     "~/.config/waybar/modules/network.jsonc",
@@ -24,6 +25,7 @@
   "modules-center": ["clock"],
 
   "modules-right": [
+    "tray",
     "pulseaudio",
     "pulseaudio#input",
     "bluetooth",
