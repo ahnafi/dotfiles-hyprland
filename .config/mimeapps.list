@@ -11,6 +11,8 @@ application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
 x-scheme-handler/bruno=bruno.desktop
 x-scheme-handler/obsidian=obsidian.desktop
+image/png=org.kde.gwenview.desktop
+image/jpeg=org.kde.gwenview.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;userapp-Zen-M5LCK3.desktop;
@@ -23,3 +25,5 @@ application/x-extension-shtml=userapp-Zen-M5LCK3.desktop;zen.desktop;
 application/xhtml+xml=userapp-Zen-M5LCK3.desktop;zen.desktop;
 application/x-extension-xhtml=userapp-Zen-M5LCK3.desktop;zen.desktop;
 application/x-extension-xht=userapp-Zen-M5LCK3.desktop;zen.desktop;
+image/png=org.kde.gwenview.desktop;
+image/jpeg=org.kde.gwenview.desktop;

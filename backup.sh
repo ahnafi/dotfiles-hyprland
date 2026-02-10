@@ -28,6 +28,8 @@ copy_dir waybar
 copy_dir wlogout
 copy_dir pipewire
 copy_dir rofi
+copy_dir swaync
+copy_dir alacritty
 
 copy_file mimeapps.list
 

@@ -1,0 +1,25 @@
+########################################
+# KEYBOARD
+########################################
+
+[keyboard]
+bindings = [
+  { key = ";", mods = "Control", action = "CreateNewWindow" },
+
+  { key = ":", mods = "Control|Shift", command = { program = "nautilus" } },
+
+  { key = "ArrowUp", mods = "Control", action = "ScrollLineUp" },
+  { key = "ArrowDown", mods = "Control", action = "ScrollLineDown" },
+
+  { key = "F", mods = "Control", action = "SearchForward" },
+  { key = "F", mods = "Control", mode = "Search", action = "SearchCancel" }
+]
+
+
+########################################
+# MOUSE
+########################################
+
+[[mouse.bindings]]
+mouse = "Right"
+action = "Paste"
