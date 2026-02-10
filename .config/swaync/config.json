@@ -31,23 +31,23 @@
       "device": "amdgpu_bl1",
       "label": "󰃠",
       "slider": true,
-      "min": 10,
+      "min": 10
     },
     "volume": {
       "device": "default",
       "label": "",
-      "slider": true,
+      "slider": true
     },
 
     "dnd": {
-      "text": "Do not disturb",
+      "text": "Do not disturb"
     },
 
     "mpris": {
       "image-size": 100,
       "image-radius": 10,
       "autohide": false,
-      "blacklist": ["org.mpris.MediaPlayer2.playerctld"],
+      "blacklist": ["org.mpris.MediaPlayer2.playerctld"]
     },
 
     "buttons-grid": {
@@ -56,37 +56,37 @@
           "label": "󰌪",
           "type": "toggle",
           "command": "bash -c $HOME/.config/swaync/scripts/quiet.sh",
-          "update-command": "bash -c $HOME/.config/swaync/scripts/update_quiet.sh",
+          "update-command": "bash -c $HOME/.config/swaync/scripts/update_quiet.sh"
         },
         {
           "label": "",
           "type": "toggle",
           "command": "bash -c $HOME/.config/swaync/scripts/inhibit.sh",
-          "update-command": "sh -c $HOME/.config/swaync/scripts/update_inhibit.sh",
+          "update-command": "sh -c $HOME/.config/swaync/scripts/update_inhibit.sh"
         },
         {
           "label": "",
           "type": "toggle",
           "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-          "update-command": "sh -c $HOME/.config/swaync/scripts/update_mic.sh",
+          "update-command": "sh -c $HOME/.config/swaync/scripts/update_mic.sh"
         },
         {
           "label": "",
-          "command": "hyprctl dispatch exec alacritty -- -e htop ; swaync-client -cp",
+          "command": "hyprctl dispatch exec alacritty -- -e htop ; swaync-client -cp"
         },
         {
           "label": "",
-          "command": "hyprctl dispatch exec alacritty -- -e nvtop ; swaync-client -cp",
+          "command": "hyprctl dispatch exec alacritty -- -e nvtop ; swaync-client -cp"
         },
         {
           "label": "",
-          "command": "hyprctl dispatch exec nwg-look ; swaync-client -cp",
+          "command": "hyprctl dispatch exec nwg-look ; swaync-client -cp"
         },
         {
           "label": "",
-          "command": "swaync-client -cp ; bash -c $HOME/.config/rofi/bin/logout",
-        },
-      ],
-    },
-  },
+          "command": "swaync-client -cp ; bash -c $HOME/.config/rofi/bin/logout"
+        }
+      ]
+    }
+  }
 }
