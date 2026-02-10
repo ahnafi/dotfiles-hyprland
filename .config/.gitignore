@@ -20,6 +20,8 @@
 !waybar/**
 !wlogout/
 !wlogout/**
+!pipewire/
+!pipewire/**
 
 # cara whitelist
 #!nama-folder/
