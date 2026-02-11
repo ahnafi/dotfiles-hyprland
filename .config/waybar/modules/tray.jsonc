@@ -1,6 +1,6 @@
 {
   "tray": {
-    "icon-size": 18,
-    "spacing": 8
-  }
+    "icon-size": 22,
+    "spacing": 8,
+  },
 }

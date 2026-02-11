@@ -1,6 +1,6 @@
 {
   "power-profiles-daemon": {
-    "format": "{icon}",
+    "format": "<span size='12pt'>{icon}</span>",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {

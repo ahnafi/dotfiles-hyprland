@@ -44,12 +44,13 @@ tooltip {
 #power-profiles-daemon,
 #battery,
 #custom-notification,
+#custom-rofi,
 #custom-wlogout {
     background: alpha(@color8, 0.35);
     color: @foreground;
-    padding: 0 12px;
+    padding: 0 16px 0 12px;
     margin: 4px;
-    border-radius: 10px;
+    border-radius: 12px;
     transition:
         background 0.2s ease,
         color 0.2s ease;
@@ -67,6 +68,7 @@ tooltip {
 #power-profiles-daemon:hover,
 #battery:hover,
 #custom-notification:hover,
+#custom-rofi:hover,
 #custom-wlogout:hover {
     background: alpha(@color6, 0.4);
     color: @background;
@@ -75,6 +77,14 @@ tooltip {
 /* ======================================================
    LEFT
    ====================================================== */
+
+/* --- rofi menu ---*/
+#custom-rofi {
+    background: @color1;
+    color: @foreground;
+    font-weight: bold;
+    padding: 0 14px 0 12px;
+}
 
 /* --- Wlogout --- */
 #custom-wlogout {
@@ -131,6 +141,88 @@ tooltip {
     -gtk-icon-effect: highlight;
 }
 
+/* Style the menu window */
+menu {
+    background-color: alpha(@background, 0.95);
+    color: @foreground;
+    border: 1px solid alpha(@color8, 0.5);
+    border-radius: 12px;
+    padding: 8px 4px;
+    font-family: "FiraCode Nerd Font", "JetBrains Mono", "Roboto", sans-serif;
+    font-size: 13px;
+}
+
+/* Style menu items */
+menu menuitem {
+    padding: 8px 16px;
+    margin: 2px 4px;
+    border-radius: 8px;
+    color: @foreground;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* Style hovered menu items */
+menu menuitem:hover {
+    background-color: alpha(@color6, 0.4);
+    color: @foreground;
+}
+
+/* Style selected / active menu items */
+menu menuitem:selected {
+    background-color: alpha(@color6, 0.4);
+    color: @foreground;
+}
+
+/* Separators between menu groups */
+menu separator {
+    background-color: alpha(@color8, 0.35);
+    margin: 4px 8px;
+    min-height: 1px;
+}
+
+/* Labels inside menu items */
+menu menuitem label {
+    color: @foreground;
+    font-size: 13px;
+}
+
+menu menuitem:hover label {
+    color: @foreground;
+}
+
+/* Check / radio items */
+menu menuitem check,
+menu menuitem radio {
+    color: @color6;
+    min-width: 14px;
+    min-height: 14px;
+    margin-right: 8px;
+}
+
+menu menuitem check:hover,
+menu menuitem radio:hover {
+    color: @color4;
+}
+
+/* Accelerator / shortcut labels */
+menu menuitem accelerator {
+    color: @color8;
+    font-size: 12px;
+}
+
+/* Submenu arrows */
+menu menuitem arrow {
+    color: @color8;
+    min-width: 14px;
+    min-height: 14px;
+}
+
+menu menuitem:hover arrow {
+    color: @foreground;
+}
+
 /* --- Pulseaudio --- */
 #pulseaudio.muted {
     color: @color8;
@@ -152,6 +244,7 @@ tooltip {
 /* --- Network --- */
 #network {
     color: @color2;
+    padding: 0 14px 0 12px;
 }
 
 #network.disconnected {
@@ -161,6 +254,7 @@ tooltip {
 /* --- Backlight --- */
 #backlight {
     color: @foreground;
+    padding: 0 4px;
 }
 
 /* --- Power Profiles --- */

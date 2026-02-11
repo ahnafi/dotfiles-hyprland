@@ -11,7 +11,7 @@
     "~/.config/waybar/modules/wlogout.jsonc",
     "~/.config/waybar/modules/workspaces.jsonc",
     "~/.config/waybar/modules/clock.jsonc",
-    "~/.config/waybar/modules/tray.jsonc", 
+    "~/.config/waybar/modules/tray.jsonc",
     "~/.config/waybar/modules/pulseaudio.jsonc",
     "~/.config/waybar/modules/bluetooth.jsonc",
     "~/.config/waybar/modules/network.jsonc",
@@ -19,9 +19,10 @@
     "~/.config/waybar/modules/power-profiles-daemon.jsonc",
     "~/.config/waybar/modules/battery.jsonc",
     "~/.config/waybar/modules/swaync.jsonc",
+    "~/.config/waybar/modules/rofi.jsonc",
   ],
 
-  "modules-left": ["custom/wlogout", "hyprland/workspaces"],
+  "modules-left": ["custom/wlogout", "custom/rofi", "hyprland/workspaces"],
 
   "modules-center": ["clock"],
 
@@ -30,7 +31,7 @@
     "pulseaudio",
     "pulseaudio#input",
     "bluetooth",
-    "network",
+    // "network",
     "backlight",
     "power-profiles-daemon",
     "battery",

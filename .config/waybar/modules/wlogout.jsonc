@@ -1,6 +1,6 @@
 {
   "custom/wlogout": {
-    "format": "⏻",
+    "format": "<span size='10pt'>⏻</span>",
     "tooltip": true,
     "tooltip-format": "Power Menu",
     "on-click": "hyprctl dispatch exec /usr/bin/wlogout",

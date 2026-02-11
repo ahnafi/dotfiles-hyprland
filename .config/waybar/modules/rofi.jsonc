@@ -1,0 +1,8 @@
+{
+  "custom/rofi": {
+    "format": "<span size='12pt'>≡</span>",
+    "tooltip": true,
+    "tooltip-format": "Apps Menu",
+    "on-click": "rofi -show drun",
+  },
+}
