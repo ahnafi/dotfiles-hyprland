@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+
+set -e
+
+WALL_DIR="$HOME/.config/wal/wallpapers"
+DEFAULT_WALL="$HOME/.config/wal/wallpapers/default.jpg"
+
+STATE_FILE="$HOME/.cache/wal/.wall_index"
+
+HYPR_COLOR_DIR="$HOME/.config/hypr/configs"
+CACHE_WAL="$HOME/.cache/wal/colors-hyprland.conf"
+TARGET_COLOR="$HYPR_COLOR_DIR/colors-hyprland.conf"
+
+mkdir -p "$HYPR_COLOR_DIR"
+mkdir -p "$(dirname "$STATE_FILE")"
+
+# ambil semua wallpaper* urut alfabet
+mapfile -t WALLS < <(
+  find "$WALL_DIR" -maxdepth 1 -type f \
+  \( -iname "wallpaper*.jpeg" \
+  -o -iname "wallpaper*.png" \
+  -o -iname "wallpaper*.gif" \
+  -o -iname "wallpaper*.pnm" \
+  -o -iname "wallpaper*.tga" \
+  -o -iname "wallpaper*.tiff" \
+  -o -iname "wallpaper*.webp" \
+  -o -iname "wallpaper*.bmp" \
+  -o -iname "wallpaper*.farbfeld" \
+  -o -iname "wallpaper*.svg" \) | sort
+)
+
+TOTAL=${#WALLS[@]}
+
+# baca index lama
+if [ -f "$STATE_FILE" ]; then
+  idx=$(cat "$STATE_FILE")
+else
+  idx=0
+fi
+
+# naikkan index
+idx=$((idx + 1))
+
+# jika lebih dari total wallpaper, reset ke 0 (default)
+if [ "$idx" -gt "$TOTAL" ]; then
+  idx=0
+fi
+
+echo "$idx" > "$STATE_FILE"
+
+# pilih wallpaper
+if [ "$idx" -eq 0 ]; then
+  wall="$DEFAULT_WALL"
+else
+  wall="${WALLS[$((idx-1))]}"
+fi
+
+[ ! -f "$wall" ] && exit 1
+
+# start daemon jika belum jalan
+pgrep -x awww-daemon >/dev/null || awww-daemon &
+
+# transition
+
+# ambil posisi cursor (pixel)
+pos=$(hyprctl cursorpos -j | jq -r '"\(.x),\(.y)"')
+
+awww img "$wall" \
+  --transition-type outer \
+  --transition-pos "$pos" \
+  --invert-y \
+  --transition-step 60 \
+  --transition-fps 60
+
+# generate warna wal
+$HOME/.local/bin/wal -i "$wall" -n
+
+# update config hyprland
+rm -f "$TARGET_COLOR"
+cp "$CACHE_WAL" "$TARGET_COLOR"
+
+hyprctl reload

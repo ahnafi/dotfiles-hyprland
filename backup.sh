@@ -30,7 +30,9 @@ copy_dir pipewire
 copy_dir rofi
 copy_dir swaync
 copy_dir alacritty
+copy_dir wal
 
 copy_file mimeapps.list
+copy_file .face.jpg
 
 echo "backup selesai di $DST"
