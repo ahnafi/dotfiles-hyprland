@@ -25,5 +25,5 @@ application/x-extension-shtml=userapp-Zen-M5LCK3.desktop;zen.desktop;
 application/xhtml+xml=userapp-Zen-M5LCK3.desktop;zen.desktop;
 application/x-extension-xhtml=userapp-Zen-M5LCK3.desktop;zen.desktop;
 application/x-extension-xht=userapp-Zen-M5LCK3.desktop;zen.desktop;
-image/png=org.kde.gwenview.desktop;
+image/png=org.gnome.gThumb.desktop;org.kde.gwenview.desktop;
 image/jpeg=org.kde.gwenview.desktop;

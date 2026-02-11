@@ -70,3 +70,6 @@ ln -sfn "$HOME/.cache/wal/colors-hyprland.conf" \
 
 ln -sfn "$HOME/.cache/wal/colors-waybar.css" \
        "$HOME/.config/waybar/colors-waybar.css"
+
+ln -sfn "$HOME/.cache/wal/colors-waybar.css" \
+       "$HOME/.config/wlogout/colors.css"

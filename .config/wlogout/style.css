@@ -1,0 +1,127 @@
+@import "colors.css";
+
+/* ── Reset ── */
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family:
+        "JetBrains Mono", "CaskaydiaCove Nerd Font", "Fira Code", monospace;
+}
+
+/* ── Fullscreen overlay – dark translucent so compositor blur shines through ── */
+window {
+    background-color: alpha(@background, 0.55);
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ── Buttons ── */
+button {
+    /* Geometry — flag -r 1 -c 5 handles layout, margins just for spacing */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 120px;
+    min-height: 120px;
+
+    /* Glass card */
+    background-color: alpha(@background, 0.45);
+    border: 2px solid alpha(@color8, 0.3);
+    border-radius: 24px;
+
+    /* Text */
+    color: @foreground;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration-color: @foreground;
+
+    /* Icon — enlarged */
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 96px;*/
+    background-size: 144px;
+}
+
+/* ── Hover / Focus — primary accent glossy highlight ── */
+button:hover,
+button:focus {
+    background-color: alpha(@color4, 0.28);
+    border: 2px solid alpha(@color6, 0.65);
+    color: @color6;
+    box-shadow:
+        0px 0px 18px alpha(@color4, 0.25),
+        inset 0px 1px 0px alpha(@foreground, 0.1);
+    text-decoration-color: @color6;
+    outline-style: none;
+}
+
+/* ── Active/Click — warm accent ── */
+button:active {
+    background-color: alpha(@color3, 0.22);
+    border: 2px solid alpha(@color3, 0.6);
+    color: @color3;
+    box-shadow:
+        0px 0px 22px alpha(@color3, 0.3),
+        inset 0px 1px 0px alpha(@foreground, 0.08);
+    text-decoration-color: @color3;
+    outline-style: none;
+}
+
+#close button {
+    background-size: 180px;
+}
+
+/* ── Per-button icons ── */
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("./icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("./icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/reboot.png"));
+}
+
+#close {
+    background-image: image(url("./icons/close.png"));
+}
+
+/* ── Subtle unique accent bottom border per button (glass tint) ── */
+#lock {
+    border-bottom: 3px solid alpha(@color4, 0.35);
+}
+
+#logout {
+    border-bottom: 3px solid alpha(@color5, 0.35);
+}
+
+#suspend {
+    border-bottom: 3px solid alpha(@color8, 0.4);
+}
+
+#reboot {
+    border-bottom: 3px solid alpha(@color3, 0.35);
+}
+
+#shutdown {
+    border-bottom: 3px solid alpha(@color1, 0.4);
+}
+
+#close {
+    border-bottom: 3px solid alpha(@color2, 0.35);
+}
