@@ -31,6 +31,7 @@ copy_dir rofi
 copy_dir swaync
 copy_dir alacritty
 copy_dir wal
+copy_dir hyprlock
 
 copy_file mimeapps.list
 copy_file .face.jpg
