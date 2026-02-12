@@ -7,6 +7,7 @@
 }
 
 window {
+    opacity: 0.8;
     transparency: "real";
     fullscreen: false;
     background-color: @background;
@@ -19,15 +20,15 @@ window {
 }
 
 mainbox {
-    children: [inputbar, message, mode-switcher, listview];
+    children: [inputbar, listview, message];
     spacing: 20px;
-    padding: 30px;
+    padding: 0px;
     background-color: transparent;
 }
 
 inputbar {
     padding: 10px 15px;
-    children: [prompt, textbox-prompt-colon, entry, case-indicator];
+    children: [entry, case-indicator];
     background-color: @alternate-normal-background;
     border-radius: 8px;
     border: 1px;
@@ -59,7 +60,8 @@ case-indicator {
 }
 
 mode-switcher, message {
-    border: 1px 0;
+    border: 1px;
+    border-radius: 8px;
     border-color: @selected-normal-background;
 }
 
