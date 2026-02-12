@@ -1,0 +1,157 @@
+/* Import pywal16 colors */
+@import "colors.rasi"
+
+* {
+    spacing: 0;
+    background-color: transparent;
+}
+
+window {
+    transparency: "real";
+    fullscreen: false;
+    background-color: @background;
+    border-radius: 12px;
+    border: 2px;
+    border-color: @selected-normal-background;
+    width: 600px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    children: [inputbar, message, mode-switcher, listview];
+    spacing: 20px;
+    padding: 30px;
+    background-color: transparent;
+}
+
+inputbar {
+    padding: 10px 15px;
+    children: [prompt, textbox-prompt-colon, entry, case-indicator];
+    background-color: @alternate-normal-background;
+    border-radius: 8px;
+    border: 1px;
+    border-color: @selected-normal-background;
+}
+
+prompt {
+    text-color: @selected-normal-background;
+    font: "mono bold 13";
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+    margin: 0 0.8ch 0 0;
+    text-color: @selected-normal-background;
+    font: "mono bold 13";
+}
+
+entry {
+    text-color: @foreground;
+    font: "mono 13";
+    placeholder: "Search...";
+    placeholder-color: @normal-foreground;
+}
+
+case-indicator {
+    text-color: @urgent-background;
+}
+
+mode-switcher, message {
+    border: 1px 0;
+    border-color: @selected-normal-background;
+}
+
+button, textbox {
+    background-color: @alternate-normal-background;
+    text-color: @foreground;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+button selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+    border-radius: 6px;
+}
+
+listview {
+    scrollbar: true;
+    margin: 0;
+    padding: 0;
+    spacing: 4px;
+    lines: 8;
+    fixed-height: true;
+}
+
+scrollbar {
+    background-color: @alternate-normal-background;
+    handle-color: @selected-normal-background;
+    handle-width: 8px;
+    border: 0;
+    border-radius: 4px;
+    margin: 0 0 0 10px;
+}
+
+element {
+    padding: 8px 10px;
+    spacing: 15px;
+    highlight: bold underline;
+    children: [element-icon, element-text];
+    border-radius: 8px;
+}
+
+element-icon {
+    background-color: inherit;
+    text-color: inherit;
+    size: 36px;
+    border-radius: 8px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    foreground-color: inherit;
+    vertical-align: 0.5;
+    font: "mono 12";
+}
+
+element normal {
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+    border-radius: 8px;
+}
+
+element alternate {
+    background-color: transparent;
+}
+
+element normal normal, element alternate normal {
+    text-color: @foreground;
+}
+
+element selected normal {
+    text-color: @selected-normal-foreground;
+}
+
+element normal urgent, element alternate urgent {
+    text-color: @urgent-background;
+}
+
+element selected urgent {
+    text-color: @selected-urgent-foreground;
+    background-color: @selected-urgent-background;
+}
+
+element normal active, element alternate active {
+    text-color: @active-background;
+}
+
+element selected active {
+    text-color: @selected-active-foreground;
+    background-color: @selected-active-background;
+}
