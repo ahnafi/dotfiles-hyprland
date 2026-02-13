@@ -56,6 +56,8 @@ configuration {
     }
 
 	/*---------- Other settings ----------*/
+    click-to-exit: true;
+    kb-cancel: "Escape,Control+g,Control+bracketleft,Control+q";
     timeout {
       action: "kb-cancel";
       delay:  0;

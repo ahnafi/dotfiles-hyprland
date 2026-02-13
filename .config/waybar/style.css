@@ -81,7 +81,7 @@ tooltip {
 /* --- rofi menu ---*/
 #custom-rofi {
     background: @color6;
-    color: @foreground;
+    color: @background;
     font-weight: bold;
     padding: 0 14px 0 12px;
 }
