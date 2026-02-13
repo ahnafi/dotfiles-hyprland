@@ -28,6 +28,7 @@ hyprlock hypridle qt5-wayland qt6-wayland swaync\
 python-pip python-gobject python-screeninfo brightnessctl\
 imagemagick blueman polkit-gnome zsh swayosd cliphist awww wl-clipboard  \
 pywal16 wlogout nautilus obs-studio btop\
+mpv-mpris \
 
 ```
 and more

@@ -74,5 +74,12 @@ ln -sfn "$HOME/.cache/wal/colors-waybar.css" \
 ln -sfn "$HOME/.cache/wal/colors-waybar.css" \
        "$HOME/.config/wlogout/colors.css"
 
+ln -sfn "$HOME/.cache/wal/colors-waybar.css" \
+       "$HOME/.config/swaync/colors.css"
+
 ln -sfn "$HOME/.cache/wal/colors-rofi-dark.rasi" \
        "$HOME/.config/rofi/themes/colors.rasi"
+
+
+# reload hyprland config
+swaync-client -R && swaync-client -rs
