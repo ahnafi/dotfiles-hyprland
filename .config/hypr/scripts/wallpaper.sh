@@ -55,12 +55,21 @@ fi
 # ambil posisi cursor (pixel)
 pos=$(hyprctl cursorpos -j | jq -r '"\(.x),\(.y)"')
 
-awww img "$wall" \
-  --transition-type outer \
-  --transition-pos "$pos" \
-  --invert-y \
-  --transition-step 60 \
-  --transition-fps 60
+# awww img "$wall" \
+#   --transition-type outer \
+#   --transition-pos "$pos" \
+#   --invert-y \
+#   --transition-step 60 \
+#   --transition-fps 60
+
+for m in $(hyprctl monitors -j | jq -r '.[].name'); do
+  awww img -o "$m" "$wall" \
+    --transition-type outer \
+    --transition-pos "$pos" \
+    --invert-y \
+    --transition-step 60 \
+    --transition-fps 60
+done
 
 # generate warna wal
 $HOME/.local/bin/wal -i "$wall" -n

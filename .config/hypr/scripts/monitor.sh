@@ -1,22 +1,37 @@
 #!/usr/bin/env bash
 
-# choice=$(printf "Extend\nMirror\nLaptop Only\nHDMI Only" | rofi -dmenu -p "Monitor")
+CONF="$HOME/.config/hypr/monitors.conf"
+
 choice=$(printf "Extend\nMirror\nLaptop Only" | rofi -dmenu -p "Monitor")
 
 case "$choice" in
-  Extend)
-    hyprctl keyword monitor "eDP-1,1920x1080,0x0,1"
-    hyprctl keyword monitor "HDMI-A-1,1920x1080,1920x0,1"
-    ;;
   Mirror)
-    hyprctl keyword monitor "eDP-1,1920x1080,0x0,1"
-    hyprctl keyword monitor "HDMI-A-1,1920x1080,0x0,1"
+    cat > "$CONF" <<EOF
+# laptop monitor
+monitor = eDP-1, preferred, 0x0, 1
+
+# hdmi mirror laptop
+monitor = HDMI-A-2, preferred, auto, 1, mirror, eDP-1
+EOF
     ;;
+
+  Extend)
+    cat > "$CONF" <<EOF
+# laptop monitor
+monitor = eDP-1, preferred, 0x0, 1
+
+# hdmi extended right of laptop
+monitor = HDMI-A-2, preferred, 1920x0, 1
+EOF
+    ;;
+
   "Laptop Only")
-    hyprctl keyword monitor "HDMI-A-1,disable"
+    cat > "$CONF" <<EOF
+# laptop only
+monitor = eDP-1, preferred, 0x0, 1
+monitor = HDMI-A-2, disable
+EOF
     ;;
-  # "HDMI Only")
-  #   hyprctl keyword monitor "eDP-1,disable"
-  #   hyprctl keyword monitor "HDMI-A-1,1920x1080,0x0,1"
-  #   ;;
 esac
+
+hyprctl reload
