@@ -1,0 +1,9 @@
+{
+  "custom/title": {
+    "exec": "~/.config/waybar/window-title.sh",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": true,
+    "max-length": 24
+  }
+}

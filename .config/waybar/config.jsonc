@@ -21,9 +21,10 @@
     "~/.config/waybar/modules/battery.jsonc",
     "~/.config/waybar/modules/swaync.jsonc",
     "~/.config/waybar/modules/rofi.jsonc",
+    "~/.config/waybar/modules/title.jsonc",
   ],
 
-  "modules-left": ["custom/wlogout", "custom/rofi", "hyprland/workspaces"],
+  "modules-left": ["custom/wlogout", "custom/rofi", "hyprland/workspaces", "custom/title"],
 
   "modules-center": ["clock"],
 
